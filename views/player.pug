@@ -1,0 +1,38 @@
+    extends layout
+
+block content
+  h1= title
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let Player = [
+                      {
+                        "Player_name": "Sachin",
+                        "Batting_style": "Right-handed",
+                        "Purchased_cost": 50000
+                    },
+                    { 
+                        "Player_name": "Dhoni",
+                        "Batting_style": "Right-handed",
+                        "Purchased_cost": 15000
+                    },
+                    {
+                        "Player_name": "Ganguly",
+                        "Batting_style": "Left-handed",
+                        "Purchased_cost": 20000
+                    },                   
+                ]
+            each c,index in Player
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Player_name}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Batting_style}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Purchased_cost}
+
+                script.                
+                      function buy(num)
+                      {
+                            alert(`You purchased item ${num+1}`)
+                      }
+  
+ 
+
+
