@@ -14,7 +14,7 @@ var vansRouter = require('./routes/vans');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));v
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
