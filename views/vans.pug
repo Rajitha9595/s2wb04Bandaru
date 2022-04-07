@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. My name is Rajitha Bandaru
+  - let results=[{van_brand:"Volkswagan",van_color:"Black",van_cost:"15000"},{van_brand:"Ford",van_color:"Red",van_cost:"20000"},{van_brand:"Toyota",van_color:"White",van_cost:"25000"}]
+  div(class="container-fluid")
+    div(class="row")
+      each vans, index in results
+        div(class="col-sm-2" onclick=`buy(${index+1})`) #{vans.van_brand} - #{vans.van_color} - $#{vans.van_cost}
+  
+  script.
+    function buy(index){
+      alert(`You purchased item ${index}`);
+    }
