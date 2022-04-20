@@ -2,5 +2,4 @@
 Rajitha Bandaru
 [server at](https://s2wb04bandaru.herokuapp.com/)
 
-ClassName: Player
-Attributes: Player_name, Batting_style, Purchased_cost
+My class is Cars with attributes car_brand (string), car_color (string), car_cost (number).
